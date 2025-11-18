@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>passphrase generator</title>
+
+  <link href=" https://cdn.jsdelivr.net/npm/css-preflight@2.0.1/styles/preflight.min.css " rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="module"></script>
+</head>
+
+<body class="font">
+  <main class="content">
+    <h1 class="title">passphrase generator</h1>
+
+    <form id="passphrase" method="post">
+      <div class="form-input">
+        <label for="word-count">word count</label>
+        <input type="range" name="word-count" id="word-count" min="1" max="10" step="1" value="3">
+        <span id="word-count-value">3</span>
+      </div>
+
+      <fieldset class="form-input">
+        <legend>separator</legend>
+
+        <div>
+          <input type="radio" id="dash" name="separator" value="dash" />
+          <label for="dash">dash</label>
+        </div>
+
+        <div>
+          <input type="radio" id="space" name="separator" value="space" />
+          <label for="space">space</label>
+        </div>
+
+        <div>
+          <input type="radio" id="underscore" name="separator" value="underscore" />
+          <label for="underscore">underscore</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-input">
+        <legend>capitalisation</legend>
+
+        <div>
+          <input type="radio" id="word" name="capitalisation" value="word" />
+          <label for="word">each word</label>
+        </div>
+
+        <div>
+          <input type="radio" id="first" name="capitalisation" value="first" />
+          <label for="first">first word</label>
+        </div>
+
+        <div>
+          <input type="radio" id="none" name="capitalisation" value="none" />
+          <label for="none">none</label>
+        </div>
+      </fieldset>
+
+      <div class="form-input">
+        <input type="submit" name="submit" id="submit" value="generate">
+      </div>
+    </form>
+
+    <div id="output-wrapper">
+      <span id="output"></span>
+
+      <button class="clip-btn" data-clipboard-target="#output">
+        <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+      </button>
+    </div>
+  </main>
+</body>
+
+</html>
