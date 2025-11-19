@@ -22,64 +22,113 @@
   <main class="content">
     <h1 class="title">passphrase generator</h1>
 
-    <form id="passphrase" method="post">
-      <div class="form-input">
-        <label for="word-count">word count</label>
-        <input type="range" name="word-count" id="word-count" min="1" max="10" step="1" value="3">
-        <span id="word-count-value">3</span>
+    <aside class="history-container grid-child">
+      <h2 class="subtitle">history</h2>
+  
+      <div class="history-wrapper">
+        <span id="history-0" class="history"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#history-0">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
       </div>
-
-      <fieldset class="form-input">
-        <legend>separator</legend>
-
-        <div>
-          <input type="radio" id="dash" name="separator" value="dash" />
-          <label for="dash">dash</label>
-        </div>
-
-        <div>
-          <input type="radio" id="space" name="separator" value="space" />
-          <label for="space">space</label>
-        </div>
-
-        <div>
-          <input type="radio" id="underscore" name="separator" value="underscore" />
-          <label for="underscore">underscore</label>
-        </div>
-      </fieldset>
-
-      <fieldset class="form-input">
-        <legend>capitalisation</legend>
-
-        <div>
-          <input type="radio" id="word" name="capitalisation" value="word" />
-          <label for="word">each word</label>
-        </div>
-
-        <div>
-          <input type="radio" id="first" name="capitalisation" value="first" />
-          <label for="first">first word</label>
-        </div>
-
-        <div>
-          <input type="radio" id="none" name="capitalisation" value="none" />
-          <label for="none">none</label>
-        </div>
-      </fieldset>
-
-      <div class="form-input">
-        <input type="submit" name="submit" id="submit" value="generate">
+  
+      <div class="history-wrapper">
+        <span id="history-1" class="history"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#history-1">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
       </div>
-    </form>
+  
+      <div class="history-wrapper">
+        <span id="history-2" class="history"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#history-2">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
+      </div>
+  
+      <div class="history-wrapper">
+        <span id="history-3" class="history"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#history-3">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
+      </div>
+  
+      <div class="history-wrapper">
+        <span id="history-4" class="history"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#history-4">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
+      </div>
+    </aside>
 
-    <div id="output-wrapper">
-      <span id="output"></span>
+    <div class="grid-child">
+      <h2 class="subtitle">generate</h2>
 
-      <button class="clip-btn" data-clipboard-target="#output">
-        <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
-      </button>
+      <form id="passphrase" method="post">
+        <div class="form-input">
+          <label for="word-count">word count</label>
+          <input required type="range" name="word-count" id="word-count" min="1" max="10" step="1" value="3">
+          <span id="word-count-value">3</span>
+        </div>
+  
+        <fieldset class="form-input">
+          <legend>separator</legend>
+  
+          <div>
+            <input type="radio" id="dash" name="separator" value="dash" />
+            <label for="dash">dash</label>
+          </div>
+  
+          <div>
+            <input type="radio" id="space" name="separator" value="space" />
+            <label for="space">space</label>
+          </div>
+  
+          <div>
+            <input type="radio" id="underscore" name="separator" value="underscore" />
+            <label for="underscore">underscore</label>
+          </div>
+        </fieldset>
+  
+        <fieldset class="form-input">
+          <legend>capitalisation</legend>
+  
+          <div>
+            <input type="radio" id="word" name="capitalisation" value="word" />
+            <label for="word">each word</label>
+          </div>
+  
+          <div>
+            <input type="radio" id="first" name="capitalisation" value="first" />
+            <label for="first">first word</label>
+          </div>
+  
+          <div>
+            <input type="radio" id="none" name="capitalisation" value="none" />
+            <label for="none">none</label>
+          </div>
+        </fieldset>
+  
+        <div class="form-input">
+          <input type="submit" name="submit" id="submit" value="generate">
+        </div>
+      </form>
+  
+      <div id="output-wrapper">
+        <span id="output"></span>
+  
+        <button class="clip-btn" data-clipboard-target="#output">
+          <img height="32" width="32" src="static/copy.png" alt="Copy to clipboard" />
+        </button>
+      </div>
     </div>
   </main>
+  
 </body>
 
 </html>
